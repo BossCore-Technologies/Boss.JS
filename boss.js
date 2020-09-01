@@ -2,7 +2,39 @@ module.exports = {
     /*
     EXPLANATION: There are several "||" in the IF statements to allow for multiple requests to return the same possible response.
     */
-textcheck: function textcheck(str) { 
+
+   msgcheck: function msgcheck(str) { 
+    if (str.toLowerCase().includes('hello') || str.toLowerCase().includes('hey') || str.toLowerCase().includes('sup') || str.toLowerCase().includes('howdy') || str.toLowerCase().includes('heya') || str.toLowerCase().includes('hoi') || str.toLowerCase().includes('hi')) {
+    return("hello") 
+    }
+
+    if (str.toLowerCase().includes('wbu') ||str.toLowerCase().includes('nm wbu') ||str.toLowerCase().includes('hru') || str.toLowerCase().includes('how are you') || str.toLowerCase().includes('what are you doing') || str.toLowerCase().includes('what are ya doing') || str.toLowerCase().includes('what r u doing') || str.toLowerCase().includes('what are u doing') || str.toLowerCase().includes('what are u doin') || str.toLowerCase().includes('what r u doin')  || str.toLowerCase().includes('what are you doin') || str.toLowerCase().includes('what are u doin')  || str.toLowerCase().includes('wbu')) {
+    return("hru") 
+    }
+
+    if (str.toLowerCase().includes('doing good') || str.toLowerCase().includes('doin good') || str.toLowerCase().includes('doing great') || str.toLowerCase().includes('going good') || str.toLowerCase().includes('going great')) {
+    return("doing good") 
+    }
+
+    if (str.toLowerCase().includes('gibberish') || str.toLowerCase().includes('nonsense') || str.toLowerCase().includes('null') || str.toLowerCase().includes('void')) {
+    return("gibberish") 
+    }
+
+    if (str.toLowerCase().includes('love, simon') || str.toLowerCase().includes('love, victor') || str.toLowerCase().includes('love, blue') || str.toLowerCase().includes('love simon') || str.toLowerCase().includes('love victor') || str.toLowerCase().includes('love blue')) {
+    return("love simon") 
+    }
+    if (str.toLowerCase().includes('are you even listening') || str.toLowerCase().includes('do you even listen')) {
+    return("listening") 
+    }
+    if (str.toLowerCase().includes('the cake is a lie') || str.toLowerCase().includes('is the cake a lie')) {
+    return("cake is a lie") 
+    }
+
+        return(0) 
+
+},
+
+read: function read(str) { 
     if (str.toLowerCase().includes('hello') || str.toLowerCase().includes('hey') || str.toLowerCase().includes('sup') || str.toLowerCase().includes('howdy') || str.toLowerCase().includes('heya') || str.toLowerCase().includes('hoi') || str.toLowerCase().includes('hi')) {
         //declare the possible responses
     var responses = ["Hello", "Hey", "Sup", "Howdy!", "Heya", "Hoi", "Hi", "Hey! How are ya doing?", "Hoi! hru?", "Hey! hru?"]
@@ -65,5 +97,20 @@ textcheck: function textcheck(str) {
         var response = responses[(Math.floor(Math.random() * responses.length)   )];
         return(response) 
 
+},
+explicit: function explicit(str) {
+    var explicit = ["nudes", "wearing", "virgin", "eat your pussy", "panties", "cock", "penis", "vagina", "porn", "underwear", "suck your cock"];
+    for (var i = 0; i < explicit.length; i++) {
+        if (str.toLowerCase().includes(explicit[i])) {
+            return("true")
+        }
+    }
+    return("false")
+},
+
+
+test: function test(str) {
+console.log("Everything looks good here cheif")
+return(0)
 }
 }
