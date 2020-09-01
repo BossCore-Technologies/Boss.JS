@@ -1,0 +1,26 @@
+{
+  "name": "boss.js",
+  "version": "1.0.0",
+  "description": "The Boss Project's official Node.JS Library",
+  "main": "boss.js",
+  "scripts": {
+    "test": "boss.test()"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BossCore-Technologies/Boss.JS.git"
+  },
+  "keywords": [
+    "Boss",
+    "AI",
+    "Boss.js",
+    "BossCore",
+    "Technologies"
+  ],
+  "author": "BossCore Technologies LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BossCore-Technologies/Boss.JS/issues"
+  },
+  "homepage": "https://github.com/BossCore-Technologies/Boss.JS#readme"
+}
