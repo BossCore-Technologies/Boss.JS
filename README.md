@@ -57,3 +57,17 @@ NOTE: All outputs listed will also cause the output! (EX: "hello!" as a string w
     listening
     cake is a lie
 If we have any outputs you want added, please make an issue or fork our code and make a pull request! It helps this library expand! (Remember, this library is MIT licensed - you just have to credit us in any forks!)
+
+## Using boss.explicit()
+`boss.explicit` is a function designed to detect explicit activity. This is perfect if you want to build a moderation bot that bans explicit activity. It isn't perfect, but we are improving it daily! (Thanks to the KidSafe project we were able to build this with ease!)
+This function returns `true` or `false` and requires a string input. Here is a good example:
+
+    if(boss.explicit(string){ 
+    console.log("Explicit Activity Found!"); 
+    }
+  Please note that `string` in this sample is a variable. For obvious reasons, our example cannot contain a string that would execute the command. Most explicit activity will fire this command. 
+
+# Credit
+We have used code from the KidSafe project - which is a project developed by BossCore Technologies and Crix. Crix is an incredible team to work with, and that's why we have implemented some KidSafe protocols into the BossAI.js
+I'd also like to thank my 2nd grade teacher for pushing me towards inspiration and my 6th and 7th grade Math... JK
+(but FR thank you to all the people that pushed me to be a developer, I hope I do something great one day!)
