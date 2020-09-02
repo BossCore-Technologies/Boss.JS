@@ -89,28 +89,66 @@ read: function read(str) {
     return(response) 
     }
 
-
+    
     //for when no recognizable response is given
-            //declare the possible responses
-            var responses = ["Okay", "OK", "K", "Cool!"]
-            // set the response and return, 
-        var response = responses[(Math.floor(Math.random() * responses.length)   )];
-        return(response) 
-
+    // code from the KidSafe Project: THX! via MIT License www.gihub.com/bosscore-technologies/kidsafe
+    const fs = require("fs");
+    placeterm = str.toLowerCase()
+    try{ 
+        var value = fs.readFileSync(`db/${placeterm}`, "utf8")
+        return(value)
+    } 
+    catch(e){ 
+        // fallback responses: most likely a 404 error
+        //declare the possible responses
+         var responses = ["Okay", "OK", "K", "Cool!"]
+         // set the response and return, 
+         var response = responses[(Math.floor(Math.random() * responses.length)   )];
+         return(response) 
+    }
+            
 },
 explicit: function explicit(str) {
-    var explicit = ["nudes", "wearing", "virgin", "eat your pussy", "panties", "cock", "penis", "vagina", "porn", "underwear", "suck your cock"];
+    var explicit = ["nudes", "wearing", "virgin", "eat your pussy", "panties", "cock", "penis", "vagina", "porn", "underwear", "suck your cock", "cum"];
     for (var i = 0; i < explicit.length; i++) {
         if (str.toLowerCase().includes(explicit[i])) {
-            return("true")
+            return(true)
         }
     }
-    return("false")
+    return(false)
 },
 
+train: function train(str, str2) {
+    const fs = require("fs"); 
+    searchterm = str.toLowerCase()
+    fs.writeFileSync(`db/${searchterm}`, str2, function(err) {
+        if (err) {
+            return (err)
+        } else {
+            return (1)
+        }
+});
+},
 
-test: function test(str) {
-console.log("Everything looks good here cheif")
+smartread: function smartread(str) {
+    const fs = require("fs");
+    placeterm = str.toLowerCase()
+    try{ 
+        var value = fs.readFileSync(`db/${placeterm}`, "utf8")
+        return(value)
+    } 
+    catch(e){ 
+        // fallback responses: most likely a 404 error
+        //declare the possible responses
+         var responses = ["Okay", "OK", "K", "Cool!"]
+         // set the response and return, 
+         var response = responses[(Math.floor(Math.random() * responses.length)   )];
+         return(response) 
+    }
+}
+
+test: function test() {
+console.log("Everything looks good here chief")
 return(0)
 }
 }
