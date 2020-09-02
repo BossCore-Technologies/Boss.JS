@@ -1,6 +1,6 @@
 {
   "name": "bossai.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Boss Project's official Node.JS Library",
   "main": "boss.js",
   "scripts": {
