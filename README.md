@@ -48,8 +48,15 @@ This will output a random response from Boss in your console. You could add this
 If you do decide to use this function in your code, we strongly recommend atleast using find and replace inside the function and replacing all uses of "Boss" with the name of your bot, otherwise it will get very akward very quickly!
 ## Using boss.messagecheck()
 
-`boss.messagecheck()` is a wonderful thing - you can build your own bots with it! We have listed all the different outputs `boss.messagecheck()` will output for given messages, as well as an example. If you want to know how to use these examples in your code, refer to the code sample above. (Just replace the content in quotes with the content listed below, we recommended replacing "Hello Fellow Geeks" with a variable to get the most out of it!)
+`boss.messagecheck()` is a wonderful thing - you can build your own bots with it! We have listed all the different outputs `boss.messagecheck()` will output for given messages, as well as an example. 
+Here is an example of how you would use this function:
 
+     if(boss.messagecheck("Hello Fellow Geeks!") == "hello") {
+     console.log("The world has not broken");
+     }
+This code will check if the keyword based around "Hey" is found, and will return a "hello" value if it is. "Hello Fellow Geeks" should be replaced with any string you wish, or a variable. Please note, using a variable will remove the requirement for the quotation marks (")
+
+Here is a list of all different outputs (As of 1.0.2)
 NOTE: All outputs listed will also cause the output! (EX: "hello!" as a string will output "hello" when put through boss.messagecheck() )
 
     hello
