@@ -28,14 +28,8 @@ If you decided to download the code directly, you'll need to do `boss = require(
 ## Using BossAI.js
 
 If you know Javascript, this will be a piece of cake! If you don't, we recommend looking up any questions you have with Javascript on Qwant or using w3schools.com to learn the basics! (Please don't open an issue if you get an error due to misuse of Javascript or the library - we love giving help but the issues can be misleading to some!)
-
-If you want to see if a message contains certain keywords, use `boss.messagecheck` (Note: This is better for building a chatbot - just check if a string contains certain keywords Boss uses and create your own responses)
-This is the code you'd use:
-
-     if(boss.messagecheck("Hello Fellow Geeks!") == "hello") {
-     console.log("The world has not broken");
-     }
-This code will check if the keyword based around "Hey" is found, and will return a "hello" value if it is. "Hello Fellow Geeks" should be replaced with any string you wish, or a variable. Please note, using a variable will remove the requirement for the quotation marks (")
+Be sure to Init BossAI.js and read up on the functions you wish to use below. Also remember that the functions automatically convert the characters into lowercase for processing, so you don't need to do that. The functions will output in lowercase as well, with the exception of `boss.read()`
+ 
 #  Functions
 ## Using boss.read()
 `boss.read()` is a pre-programmed chatbot function. If you wish to use it in your chatbot, you may want to consider reprogramming it or using `boss.messagecheck()`
