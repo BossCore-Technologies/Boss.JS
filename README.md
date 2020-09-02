@@ -29,12 +29,6 @@ If you decided to download the code directly, you'll need to do `boss = require(
 
 If you know Javascript, this will be a piece of cake! If you don't, we recommend looking up any questions you have with Javascript on Qwant or using w3schools.com to learn the basics! (Please don't open an issue if you get an error due to misuse of Javascript or the library - we love giving help but the issues can be misleading to some!)
 
-We recommend using most things in BossAI.js with an IF statement or some sort of text report. For example with boss.read:
-
-    console.log(boss.read(variable));
-    
-This code will log some text in your console. Read is mostly used in creating chatbots, which makes it very rough to use in IF statements. The output of Read can vary depending on the random number generator built inside the module, but it is perfect to add a bit of life to your Discord bot! (If you want to build a Discord bot, we recommend changing some things about BossAI.js - just running Find and Replace, replacing the word "Boss" with the name of your bot will do just fine!)
-
 If you want to see if a message contains certain keywords, use `boss.messagecheck` (Note: This is better for building a chatbot - just check if a string contains certain keywords Boss uses and create your own responses)
 This is the code you'd use:
 
@@ -42,7 +36,16 @@ This is the code you'd use:
      console.log("The world has not broken");
      }
 This code will check if the keyword based around "Hey" is found, and will return a "hello" value if it is. "Hello Fellow Geeks" should be replaced with any string you wish, or a variable. Please note, using a variable will remove the requirement for the quotation marks (")
+#  Functions
+## Using boss.read()
+`boss.read()` is a pre-programmed chatbot function. If you wish to use it in your chatbot, you may want to consider reprogramming it or using `boss.messagecheck()`
+You can use the function in a string fashion, otherwise your code may act unexpectedly. Here is a proper example:
 
+    console.log(boss.read("Hello!"))
+    
+This will output a random response from Boss in your console. You could add this code inside a bot of any kind, but beware it will output things pre-programmed for Boss specifically - you may need to check the code of the function or make major modifications to use it the way you'd like. For this reason, we'd recommend `boss.messagecheck()`
+
+If you do decide to use this function in your code, we strongly recommend atleast using find and replace inside the function and replacing all uses of "Boss" with the name of your bot, otherwise it will get very akward very quickly!
 ## Using boss.messagecheck()
 
 `boss.messagecheck()` is a wonderful thing - you can build your own bots with it! We have listed all the different outputs `boss.messagecheck()` will output for given messages, as well as an example. If you want to know how to use these examples in your code, refer to the code sample above. (Just replace the content in quotes with the content listed below, we recommended replacing "Hello Fellow Geeks" with a variable to get the most out of it!)
